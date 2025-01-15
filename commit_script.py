@@ -1,17 +1,9 @@
 import subprocess, os, random
 from datetime import datetime
-from dotenv import load_dotenv
-
-load_dotenv()
 
 my_username = "SilverWWW"
 my_email = "wsilver222@gmail.com"
 repo_name = "gh-autocommiter"
-
-PAT = os.getenv("GHPAT")
-if not PAT:
-    raise ValueError("Personal Access Token (PAT) not found in environment variables.")
-
 
 subprocess.run(["git", "config", "--global", "user.name", my_username])
 subprocess.run(["git", "config", "--global", "user.email", my_email])
