@@ -38,4 +38,7 @@ for i, commit_message in enumerate(commit_messages):
 
 repo_url = f"https://x-access-token:{PAT}@github.com/{my_username}/{repo_name}.git"
 subprocess.run(["git", "remote", "set-url", "origin", repo_url])
-subprocess.run(["git", "push"])
+try:
+    subprocess.run(["git", "push"], check=True)
+except subprocess.CalledProcessError:
+    print("Failed to push changes.")
