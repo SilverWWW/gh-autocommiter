@@ -25,5 +25,5 @@ jobs:
 
     - name: Run script
       env:
-        PAT: ${{ secrets.GHPAT }}
+        GHPAT: ${{ secrets.GHPAT }}
       run: python commit_script.py
