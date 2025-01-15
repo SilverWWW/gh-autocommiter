@@ -25,5 +25,5 @@ jobs:
 
     - name: Run script
       env:
-        GHPAT: ${{ secrets.GHPAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python commit_script.py
