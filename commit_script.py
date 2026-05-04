@@ -8,7 +8,7 @@ repo_name = "gh-autocommiter"
 subprocess.run(["git", "config", "--global", "user.name", my_username])
 subprocess.run(["git", "config", "--global", "user.email", my_email])
 
-num_commits = random.randint(1,5)
+num_commits = random.randint(0,10)
 
 file_path = "commits.txt"
 commit_messages = [f"Automated commit #{i+1} on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}" for i in range(num_commits)]    
